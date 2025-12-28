@@ -8,13 +8,13 @@ import { LanguageProvider } from '@/contexts/LanguageContext'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Wren Digital - Modern Web Solutions',
-  description: 'Professional web development and digital solutions. We create stunning websites, powerful web applications, and premium digital products.',
-  keywords: 'web development, web design, digital solutions, React, Next.js, web applications',
-  authors: [{ name: 'Wren Digital' }],
+  title: 'Wren Tech - Modern Web Solutions',
+  description: 'Professional web development and technical solutions. We create stunning websites, powerful web applications, and premium software products.',
+  keywords: 'web development, web design, software engineering, technical solutions, React, Next.js, web applications',
+  authors: [{ name: 'Wren Tech' }],
   openGraph: {
-    title: 'Wren Digital - Modern Web Solutions',
-    description: 'Professional web development and digital solutions',
+    title: 'Wren Tech - Modern Web Solutions',
+    description: 'Professional web development and technical solutions',
     type: 'website',
   },
 }

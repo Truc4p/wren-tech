@@ -26,11 +26,28 @@ const Header = () => {
       <nav className="container-custom">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2">
-            <div className="w-20 h-10 bg-gradient-to-br from-primary-600 to-secondary-600 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-xl">Wren</span>
+          <Link href="/" className="flex items-center space-x-3 group">
+            <div className="relative">
+              {/* Icon container with gradient background */}
+              <div className="w-12 h-12 bg-gradient-to-br from-primary-600 via-primary-500 to-secondary-600 rounded-xl flex items-center justify-center shadow-lg shadow-primary-600/20 group-hover:shadow-xl group-hover:shadow-primary-600/30 transition-all duration-300 group-hover:scale-105">
+                {/* Stylized W icon */}
+                <svg className="w-7 h-7 text-white" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M3 4L7 20L12 8L17 20L21 4" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </div>
+              {/* Glow effect */}
+              <div className="absolute inset-0 bg-gradient-to-br from-primary-400 to-secondary-400 rounded-xl blur opacity-0 group-hover:opacity-30 transition-opacity duration-300"></div>
             </div>
-            <span className="text-xl text-gray-900">Digital</span>
+            
+            {/* Text */}
+            <div className="flex flex-col -space-y-1">
+              <span className="text-2xl font-bold bg-gradient-to-r from-primary-600 to-secondary-600 bg-clip-text text-transparent">
+                Wren
+              </span>
+              <span className="text-xs font-semibold text-gray-500 tracking-wider uppercase">
+                Tech
+              </span>
+            </div>
           </Link>
 
           {/* Desktop Navigation */}

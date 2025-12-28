@@ -1,4 +1,4 @@
-# Wren Digital Website
+# Wren Tech Website
 
 A modern, professional business website built with Next.js 14, TypeScript, and Tailwind CSS. Inspired by professional digital agency websites, featuring smooth animations and responsive design.
 
@@ -137,7 +137,7 @@ Contributions, issues, and feature requests are welcome!
 
 ## 📧 Contact
 
-For questions or support, reach out at info@wrendigital.com
+For questions or support, reach out at info@wrentech.com
 
 ---
 

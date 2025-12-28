@@ -37,7 +37,7 @@ const CTA = () => {
               <FiArrowRight />
             </Link>
             <a
-              href="mailto:info@wrendigital.com"
+              href="mailto:info@wrentech.com"
               className="bg-transparent hover:bg-white/10 text-white font-semibold py-4 px-8 rounded-lg border-2 border-white transition-all duration-300 inline-flex items-center space-x-2"
             >
               <FiMail />
