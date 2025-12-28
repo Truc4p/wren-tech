@@ -10,7 +10,7 @@ export default function About() {
       {/* Hero Section */}
       <section className="py-20 md:py-32 bg-gradient-to-br from-primary-50 to-secondary-50">
         <div className="container-custom text-center">
-          <h1 className="section-title">{t('aboutPage.title')}</h1>
+          <h1 className="section-title text-transparent bg-clip-text bg-gradient-to-r from-primary-600 to-secondary-600">{t('aboutPage.title')}</h1>
           <p className="section-subtitle max-w-3xl mx-auto">
             {t('aboutPage.subtitle')}
           </p>
