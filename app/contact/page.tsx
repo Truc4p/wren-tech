@@ -1,10 +1,11 @@
 'use client'
 
 import { useState } from 'react'
-import type { Metadata } from 'next'
 import { FiMail, FiPhone, FiMapPin, FiSend } from 'react-icons/fi'
+import { useLanguage } from '@/contexts/LanguageContext'
 
 export default function Contact() {
+  const { t } = useLanguage()
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -28,7 +29,7 @@ export default function Contact() {
 
     // Simulate form submission
     setTimeout(() => {
-      alert('Thank you for your message! We will get back to you soon.')
+      alert(t('contactPage.successMessage'))
       setFormData({ name: '', email: '', phone: '', service: '', message: '' })
       setIsSubmitting(false)
     }, 1500)
@@ -39,9 +40,9 @@ export default function Contact() {
       {/* Hero Section */}
       <section className="py-20 md:py-32 bg-gradient-to-br from-primary-50 to-secondary-50">
         <div className="container-custom text-center">
-          <h1 className="section-title">Get In Touch</h1>
+          <h1 className="section-title">{t('contactPage.title')}</h1>
           <p className="section-subtitle max-w-3xl mx-auto">
-            Have a project in mind? Let's discuss how we can help bring your vision to life
+            {t('contactPage.subtitle')}
           </p>
         </div>
       </section>
@@ -52,11 +53,11 @@ export default function Contact() {
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Contact Form */}
             <div>
-              <h2 className="text-2xl font-bold text-gray-900 mb-6">Send Us a Message</h2>
+              <h2 className="text-2xl font-bold text-gray-900 mb-6">{t('contactPage.formTitle')}</h2>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
-                    Full Name *
+                    {t('contactPage.name')} *
                   </label>
                   <input
                     type="text"
@@ -66,13 +67,13 @@ export default function Contact() {
                     onChange={handleChange}
                     required
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none transition"
-                    placeholder="John Doe"
+                    placeholder={t('contactPage.namePlaceholder')}
                   />
                 </div>
 
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                    Email Address *
+                    {t('contactPage.email')} *
                   </label>
                   <input
                     type="email"
@@ -82,13 +83,13 @@ export default function Contact() {
                     onChange={handleChange}
                     required
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none transition"
-                    placeholder="john@example.com"
+                    placeholder={t('contactPage.emailPlaceholder')}
                   />
                 </div>
 
                 <div>
                   <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
-                    Phone Number
+                    {t('contactPage.phone')}
                   </label>
                   <input
                     type="tel"
@@ -97,13 +98,13 @@ export default function Contact() {
                     value={formData.phone}
                     onChange={handleChange}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none transition"
-                    placeholder="+1 234 567 890"
+                    placeholder={t('contactPage.phonePlaceholder')}
                   />
                 </div>
 
                 <div>
                   <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">
-                    Service Interested In
+                    {t('contactPage.service')}
                   </label>
                   <select
                     id="service"
@@ -112,19 +113,19 @@ export default function Contact() {
                     onChange={handleChange}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none transition"
                   >
-                    <option value="">Select a service</option>
-                    <option value="web-development">Web Development</option>
-                    <option value="ui-ux-design">UI/UX Design</option>
-                    <option value="ecommerce">E-commerce Solutions</option>
-                    <option value="backend">Backend Development</option>
-                    <option value="seo">SEO Optimization</option>
-                    <option value="other">Other</option>
+                    <option value="">{t('contactPage.selectService')}</option>
+                    <option value="web-development">{t('contactPage.serviceWebDev')}</option>
+                    <option value="ui-ux-design">{t('contactPage.serviceUiUx')}</option>
+                    <option value="ecommerce">{t('contactPage.serviceEcommerce')}</option>
+                    <option value="backend">{t('contactPage.serviceBackend')}</option>
+                    <option value="seo">{t('contactPage.serviceSeo')}</option>
+                    <option value="other">{t('contactPage.serviceOther')}</option>
                   </select>
                 </div>
 
                 <div>
                   <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-                    Your Message *
+                    {t('contactPage.message')} *
                   </label>
                   <textarea
                     id="message"
@@ -134,7 +135,7 @@ export default function Contact() {
                     required
                     rows={6}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none transition resize-none"
-                    placeholder="Tell us about your project..."
+                    placeholder={t('contactPage.messagePlaceholder')}
                   ></textarea>
                 </div>
 
@@ -143,7 +144,7 @@ export default function Contact() {
                   disabled={isSubmitting}
                   className="w-full btn-primary inline-flex items-center justify-center space-x-2 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  <span>{isSubmitting ? 'Sending...' : 'Send Message'}</span>
+                  <span>{isSubmitting ? t('contactPage.sending') : t('contactPage.send')}</span>
                   <FiSend />
                 </button>
               </form>
@@ -151,15 +152,15 @@ export default function Contact() {
 
             {/* Contact Information */}
             <div>
-              <h2 className="text-2xl font-bold text-gray-900 mb-6">Contact Information</h2>
+              <h2 className="text-2xl font-bold text-gray-900 mb-6">{t('contactPage.infoTitle')}</h2>
               <div className="space-y-6 mb-12">
                 <div className="flex items-start space-x-4">
                   <div className="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center flex-shrink-0">
                     <FiMapPin className="text-primary-600" size={20} />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-gray-900 mb-1">Address</h3>
-                    <p className="text-gray-600">123 Business Street, Suite 100<br />City, State 12345</p>
+                    <h3 className="font-semibold text-gray-900 mb-1">{t('contactPage.address')}</h3>
+                    <p className="text-gray-600 whitespace-pre-line">{t('contactPage.addressValue')}</p>
                   </div>
                 </div>
 
@@ -168,9 +169,9 @@ export default function Contact() {
                     <FiPhone className="text-primary-600" size={20} />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-gray-900 mb-1">Phone</h3>
-                    <a href="tel:+1234567890" className="text-gray-600 hover:text-primary-600">
-                      +1 234 567 890
+                    <h3 className="font-semibold text-gray-900 mb-1">{t('contactPage.phone')}</h3>
+                    <a href={`tel:${t('contactPage.phoneValue')}`} className="text-gray-600 hover:text-primary-600">
+                      {t('contactPage.phoneValue')}
                     </a>
                   </div>
                 </div>
@@ -180,28 +181,28 @@ export default function Contact() {
                     <FiMail className="text-primary-600" size={20} />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-gray-900 mb-1">Email</h3>
-                    <a href="mailto:info@wrendigital.com" className="text-gray-600 hover:text-primary-600">
-                      info@wrendigital.com
+                    <h3 className="font-semibold text-gray-900 mb-1">{t('contactPage.email')}</h3>
+                    <a href={`mailto:${t('contactPage.emailValue')}`} className="text-gray-600 hover:text-primary-600">
+                      {t('contactPage.emailValue')}
                     </a>
                   </div>
                 </div>
               </div>
 
               <div className="bg-gradient-to-br from-primary-50 to-secondary-50 p-8 rounded-2xl">
-                <h3 className="text-xl font-bold text-gray-900 mb-4">Business Hours</h3>
+                <h3 className="text-xl font-bold text-gray-900 mb-4">{t('contactPage.hoursTitle')}</h3>
                 <div className="space-y-2 text-gray-700">
                   <div className="flex justify-between">
-                    <span>Monday - Friday</span>
-                    <span className="font-semibold">9:00 AM - 6:00 PM</span>
+                    <span>{t('contactPage.monday')}</span>
+                    <span className="font-semibold">{t('contactPage.mondayHours')}</span>
                   </div>
                   <div className="flex justify-between">
-                    <span>Saturday</span>
-                    <span className="font-semibold">10:00 AM - 4:00 PM</span>
+                    <span>{t('contactPage.saturday')}</span>
+                    <span className="font-semibold">{t('contactPage.saturdayHours')}</span>
                   </div>
                   <div className="flex justify-between">
-                    <span>Sunday</span>
-                    <span className="font-semibold">Closed</span>
+                    <span>{t('contactPage.sunday')}</span>
+                    <span className="font-semibold">{t('contactPage.sundayHours')}</span>
                   </div>
                 </div>
               </div>

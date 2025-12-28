@@ -1,65 +1,64 @@
-import type { Metadata } from 'next'
-import Image from 'next/image'
+'use client'
 
-export const metadata: Metadata = {
-  title: 'Our Projects - Wren Digital',
-  description: 'Explore our portfolio of successful web development projects and digital solutions.',
-}
+import Image from 'next/image'
+import { useLanguage } from '@/contexts/LanguageContext'
 
 export default function ProjectsPage() {
+  const { t } = useLanguage()
+  
   const projects = [
     {
-      title: 'E-commerce Platform',
-      category: 'Web Development',
-      description: 'A modern online store with seamless checkout, inventory management, and admin dashboard. Built with Next.js and Stripe integration for secure payments.',
+      title: t('projectsPage.project1.title'),
+      category: t('projectsPage.project1.category'),
+      description: t('projectsPage.project1.description'),
       image: 'https://images.unsplash.com/photo-1661956602116-aa6865609028?w=1200&h=800&fit=crop',
       tags: ['Next.js', 'Stripe', 'Tailwind CSS', 'MongoDB'],
-      client: 'Fashion Retail Co.',
+      client: t('projectsPage.project1.client'),
       year: '2024',
     },
     {
-      title: 'SaaS Dashboard',
-      category: 'Web Application',
-      description: 'Analytics dashboard with real-time data visualization, user management, and reporting features. Integrated with multiple data sources for comprehensive insights.',
+      title: t('projectsPage.project2.title'),
+      category: t('projectsPage.project2.category'),
+      description: t('projectsPage.project2.description'),
       image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&h=800&fit=crop',
       tags: ['React', 'Chart.js', 'REST API', 'PostgreSQL'],
-      client: 'Analytics Pro',
+      client: t('projectsPage.project2.client'),
       year: '2024',
     },
     {
-      title: 'Portfolio Website',
-      category: 'Web Design',
-      description: 'Creative portfolio showcasing photography and design work with smooth animations and interactive galleries. CMS integration for easy content updates.',
+      title: t('projectsPage.project3.title'),
+      category: t('projectsPage.project3.category'),
+      description: t('projectsPage.project3.description'),
       image: 'https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=1200&h=800&fit=crop',
       tags: ['Next.js', 'Framer Motion', 'Sanity CMS', 'TypeScript'],
-      client: 'Creative Studio',
+      client: t('projectsPage.project3.client'),
       year: '2023',
     },
     {
-      title: 'Restaurant Booking System',
-      category: 'Web Application',
-      description: 'Online reservation system with menu management, table booking, and automated email confirmations. Real-time availability updates.',
+      title: t('projectsPage.project4.title'),
+      category: t('projectsPage.project4.category'),
+      description: t('projectsPage.project4.description'),
       image: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200&h=800&fit=crop',
       tags: ['React', 'Node.js', 'MongoDB', 'SendGrid'],
-      client: 'Urban Bistro',
+      client: t('projectsPage.project4.client'),
       year: '2023',
     },
     {
-      title: 'Fitness Tracking App',
-      category: 'Mobile Web App',
-      description: 'Workout tracker with progress monitoring, meal planning, and social features. Progressive Web App for offline functionality.',
+      title: t('projectsPage.project5.title'),
+      category: t('projectsPage.project5.category'),
+      description: t('projectsPage.project5.description'),
       image: 'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1200&h=800&fit=crop',
       tags: ['PWA', 'React', 'Firebase', 'Service Workers'],
-      client: 'FitLife Gym',
+      client: t('projectsPage.project5.client'),
       year: '2023',
     },
     {
-      title: 'Real Estate Portal',
-      category: 'Web Development',
-      description: 'Property listing platform with advanced search filters, map integration, and virtual tour features. Agent dashboard for property management.',
+      title: t('projectsPage.project6.title'),
+      category: t('projectsPage.project6.category'),
+      description: t('projectsPage.project6.description'),
       image: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1200&h=800&fit=crop',
       tags: ['Next.js', 'Google Maps API', 'PostgreSQL', 'AWS'],
-      client: 'Metro Realty',
+      client: t('projectsPage.project6.client'),
       year: '2022',
     },
   ]
@@ -69,9 +68,9 @@ export default function ProjectsPage() {
       {/* Hero Section */}
       <section className="py-20 md:py-32 bg-gradient-to-br from-primary-50 to-secondary-50">
         <div className="container-custom text-center">
-          <h1 className="section-title">Our Projects</h1>
+          <h1 className="section-title">{t('projectsPage.title')}</h1>
           <p className="section-subtitle max-w-3xl mx-auto">
-            Explore our portfolio of successful projects delivered for clients worldwide
+            {t('projectsPage.subtitle')}
           </p>
         </div>
       </section>
@@ -108,11 +107,11 @@ export default function ProjectsPage() {
                   <div className="mb-6">
                     <div className="grid grid-cols-2 gap-4 mb-4">
                       <div>
-                        <div className="text-sm text-gray-500 mb-1">Client</div>
+                        <div className="text-sm text-gray-500 mb-1">{t('projectsPage.client')}</div>
                         <div className="font-semibold text-gray-900">{project.client}</div>
                       </div>
                       <div>
-                        <div className="text-sm text-gray-500 mb-1">Year</div>
+                        <div className="text-sm text-gray-500 mb-1">{t('projectsPage.year')}</div>
                         <div className="font-semibold text-gray-900">{project.year}</div>
                       </div>
                     </div>

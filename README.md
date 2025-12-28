@@ -45,7 +45,7 @@ yarn dev
 pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) in your browser to see the result.
+Open [http://localhost:3001](http://localhost:3001) in your browser to see the result.
 
 ## 📁 Project Structure
 

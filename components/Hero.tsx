@@ -77,21 +77,92 @@ const Hero = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="relative hidden lg:block"
           >
-            <div className="relative w-full h-[500px] bg-gradient-to-br from-primary-600 to-secondary-600 rounded-3xl shadow-2xl overflow-hidden">
-              {/* Placeholder for hero image - replace with actual image */}
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-center text-white">
-                  <div className="w-24 h-24 bg-white/20 backdrop-blur-sm rounded-2xl mx-auto mb-4 flex items-center justify-center">
-                    <div className="w-16 h-16 bg-white rounded-xl"></div>
+            <div className="relative w-full h-[500px]">
+              {/* Main illustration container */}
+              <div className="relative w-full h-full">
+                {/* Floating Card 1 - Top Left */}
+                <motion.div
+                  animate={{ y: [0, -20, 0] }}
+                  transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+                  className="absolute top-0 left-10 w-48 h-32 bg-white rounded-2xl shadow-xl p-4 border border-gray-100"
+                >
+                  <div className="flex items-center space-x-2 mb-3">
+                    <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+                    <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
+                    <div className="w-3 h-3 bg-red-500 rounded-full"></div>
                   </div>
-                  <p className="text-lg font-semibold">Your Hero Image Here</p>
-                  <p className="text-sm opacity-80 mt-2">Replace with your actual design</p>
-                </div>
+                  <div className="space-y-2">
+                    <div className="h-2 bg-gradient-to-r from-primary-400 to-primary-200 rounded w-3/4"></div>
+                    <div className="h-2 bg-gray-200 rounded w-full"></div>
+                    <div className="h-2 bg-gray-200 rounded w-2/3"></div>
+                  </div>
+                </motion.div>
+
+                {/* Floating Card 2 - Center Right */}
+                <motion.div
+                  animate={{ y: [0, 20, 0] }}
+                  transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
+                  className="absolute top-32 right-0 w-56 h-40 bg-gradient-to-br from-primary-500 to-secondary-500 rounded-2xl shadow-2xl p-5"
+                >
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-lg flex items-center justify-center">
+                      <div className="w-6 h-6 bg-white rounded"></div>
+                    </div>
+                    <div className="flex space-x-1">
+                      <div className="w-2 h-8 bg-white/60 rounded"></div>
+                      <div className="w-2 h-12 bg-white/80 rounded"></div>
+                      <div className="w-2 h-6 bg-white/60 rounded"></div>
+                    </div>
+                  </div>
+                  <div className="space-y-2">
+                    <div className="h-2 bg-white/40 rounded w-full"></div>
+                    <div className="h-2 bg-white/30 rounded w-4/5"></div>
+                  </div>
+                </motion.div>
+
+                {/* Floating Card 3 - Bottom Left */}
+                <motion.div
+                  animate={{ y: [0, -15, 0] }}
+                  transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+                  className="absolute bottom-20 left-0 w-52 h-36 bg-white rounded-2xl shadow-xl p-4 border border-gray-100"
+                >
+                  <div className="flex items-center space-x-3 mb-3">
+                    <div className="w-10 h-10 bg-gradient-to-br from-secondary-400 to-secondary-600 rounded-full"></div>
+                    <div>
+                      <div className="h-2 bg-gray-300 rounded w-20 mb-1"></div>
+                      <div className="h-2 bg-gray-200 rounded w-16"></div>
+                    </div>
+                  </div>
+                  <div className="grid grid-cols-3 gap-2 mt-4">
+                    <div className="h-12 bg-gradient-to-br from-primary-100 to-primary-200 rounded-lg"></div>
+                    <div className="h-12 bg-gradient-to-br from-secondary-100 to-secondary-200 rounded-lg"></div>
+                    <div className="h-12 bg-gradient-to-br from-gray-100 to-gray-200 rounded-lg"></div>
+                  </div>
+                </motion.div>
+
+                {/* Floating Card 4 - Bottom Right */}
+                <motion.div
+                  animate={{ y: [0, 25, 0] }}
+                  transition={{ duration: 5.5, repeat: Infinity, ease: "easeInOut", delay: 1.5 }}
+                  className="absolute bottom-0 right-10 w-44 h-28 bg-white rounded-2xl shadow-xl p-4 border border-gray-100"
+                >
+                  <div className="flex items-center justify-between mb-3">
+                    <div className="text-xs font-semibold text-gray-400">ANALYTICS</div>
+                    <div className="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center">
+                      <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+                    </div>
+                  </div>
+                  <div className="flex items-end space-x-1 h-12">
+                    <div className="w-full h-8 bg-primary-200 rounded"></div>
+                    <div className="w-full h-12 bg-primary-400 rounded"></div>
+                    <div className="w-full h-6 bg-primary-300 rounded"></div>
+                    <div className="w-full h-10 bg-primary-500 rounded"></div>
+                  </div>
+                </motion.div>
+
+                {/* Central Circle Decoration */}
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-gradient-to-br from-primary-400 to-secondary-400 rounded-full opacity-20 blur-2xl"></div>
               </div>
-              
-              {/* Floating elements decoration */}
-              <div className="absolute top-10 right-10 w-20 h-20 bg-white/10 backdrop-blur-sm rounded-lg animate-pulse"></div>
-              <div className="absolute bottom-10 left-10 w-16 h-16 bg-white/10 backdrop-blur-sm rounded-lg animate-pulse delay-75"></div>
             </div>
           </motion.div>
         </div>
