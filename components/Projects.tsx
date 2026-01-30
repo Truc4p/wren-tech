@@ -54,7 +54,7 @@ const Projects = () => {
   ]
 
   return (
-    <section id="projects" className="py-20 md:py-32 bg-gray-50">
+    <section id="projects" className="py-16 sm:py-20 md:py-32 bg-gray-50">
       <div className="container-custom">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -69,7 +69,7 @@ const Projects = () => {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {projects.map((project, index) => (
             <motion.div
               key={index}
@@ -80,7 +80,7 @@ const Projects = () => {
               className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300"
             >
               {/* Image */}
-              <div className="relative h-64 overflow-hidden">
+              <div className="relative h-48 sm:h-56 md:h-64 overflow-hidden">
                 <Image
                   src={project.image}
                   alt={project.title}
@@ -97,12 +97,12 @@ const Projects = () => {
               </div>
 
               {/* Content */}
-              <div className="p-6">
-                <div className="text-sm text-primary-600 font-semibold mb-2">{project.category}</div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-primary-600 transition-colors">
+              <div className="p-5 sm:p-6">
+                <div className="text-xs sm:text-sm text-primary-600 font-semibold mb-2">{project.category}</div>
+                <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2 group-hover:text-primary-600 transition-colors">
                   {project.title}
                 </h3>
-                <p className="text-gray-600 mb-4">{project.description}</p>
+                <p className="text-sm sm:text-base text-gray-600 mb-4 line-clamp-2">{project.description}</p>
                 
                 {/* Tags */}
                 <div className="flex flex-wrap gap-2">

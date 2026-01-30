@@ -52,7 +52,7 @@ const Testimonials = () => {
   ]
 
   return (
-    <section id="testimonials" className="py-20 md:py-32 bg-white">
+    <section id="testimonials" className="py-16 sm:py-20 md:py-32 bg-white">
       <div className="container-custom">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -67,7 +67,7 @@ const Testimonials = () => {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {testimonials.map((testimonial, index) => (
             <motion.div
               key={index}
@@ -75,23 +75,23 @@ const Testimonials = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="bg-gray-50 p-8 rounded-2xl hover:shadow-xl transition-shadow duration-300"
+              className="bg-gray-50 p-6 sm:p-8 rounded-2xl hover:shadow-xl transition-shadow duration-300"
             >
               {/* Rating */}
-              <div className="flex space-x-1 mb-4">
+              <div className="flex space-x-1 mb-3 sm:mb-4">
                 {[...Array(testimonial.rating)].map((_, i) => (
-                  <FiStar key={i} className="text-yellow-400 fill-yellow-400" size={18} />
+                  <FiStar key={i} className="text-yellow-400 fill-yellow-400" size={16} />
                 ))}
               </div>
 
               {/* Content */}
-              <p className="text-gray-700 mb-6 leading-relaxed italic">
+              <p className="text-sm sm:text-base text-gray-700 mb-5 sm:mb-6 leading-relaxed italic">
                 "{testimonial.content}"
               </p>
 
               {/* Author */}
-              <div className="flex items-center space-x-4">
-                <div className="relative w-12 h-12 rounded-full overflow-hidden bg-gradient-to-br from-primary-400 to-secondary-400">
+              <div className="flex items-center space-x-3 sm:space-x-4">
+                <div className="relative w-10 h-10 sm:w-12 sm:h-12 rounded-full overflow-hidden bg-gradient-to-br from-primary-400 to-secondary-400 flex-shrink-0">
                   <img
                     src={testimonial.image}
                     alt={testimonial.name}
@@ -99,8 +99,8 @@ const Testimonials = () => {
                   />
                 </div>
                 <div>
-                  <div className="font-semibold text-gray-900">{testimonial.name}</div>
-                  <div className="text-sm text-gray-600">{testimonial.role}</div>
+                  <div className="font-semibold text-gray-900 text-sm sm:text-base">{testimonial.name}</div>
+                  <div className="text-xs sm:text-sm text-gray-600">{testimonial.role}</div>
                 </div>
               </div>
             </motion.div>

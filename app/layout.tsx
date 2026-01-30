@@ -12,6 +12,11 @@ export const metadata: Metadata = {
   description: 'Professional web development and technical solutions. We create stunning websites, powerful web applications, and premium software products.',
   keywords: 'web development, web design, software engineering, technical solutions, React, Next.js, web applications',
   authors: [{ name: 'Wren Tech' }],
+  viewport: {
+    width: 'device-width',
+    initialScale: 1,
+    maximumScale: 5,
+  },
   openGraph: {
     title: 'Wren Tech - Modern Web Solutions',
     description: 'Professional web development and technical solutions',

@@ -91,42 +91,44 @@ const Header = () => {
         </div>
 
         {/* Mobile Navigation */}
-        {isMenuOpen && (
-          <div className="md:hidden py-4 border-t">
-            <div className="flex flex-col space-y-4">
-              {navigation.map((item) => (
-                <Link
-                  key={item.name}
-                  href={item.href}
-                  className="text-gray-700 hover:text-primary-600 font-medium transition-colors"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  {item.name}
-                </Link>
-              ))}
-              
-              {/* Mobile Language Switcher */}
-              <button
-                onClick={() => {
-                  toggleLanguage()
-                  setIsMenuOpen(false)
-                }}
-                className="flex items-center space-x-2 text-gray-700 hover:text-primary-600 transition-colors"
-              >
-                <FiGlobe size={18} />
-                <span className="font-medium">{language === 'en' ? 'Tiếng Việt' : 'English'}</span>
-              </button>
-
+        <div
+          className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${
+            isMenuOpen ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'
+          }`}
+        >
+          <div className="py-6 px-2 border-t space-y-1">
+            {navigation.map((item) => (
               <Link
-                href="/contact"
-                className="bg-primary-600 hover:bg-primary-700 text-white px-6 py-2 rounded-lg transition-colors text-center"
+                key={item.name}
+                href={item.href}
+                className="block text-gray-700 hover:text-primary-600 hover:bg-primary-50 font-medium transition-all rounded-lg px-4 py-3"
                 onClick={() => setIsMenuOpen(false)}
               >
-                {t('nav.getStarted')}
+                {item.name}
               </Link>
-            </div>
+            ))}
+            
+            {/* Mobile Language Switcher */}
+            <button
+              onClick={() => {
+                toggleLanguage()
+                setIsMenuOpen(false)
+              }}
+              className="w-full flex items-center space-x-2 text-gray-700 hover:text-primary-600 hover:bg-primary-50 transition-all rounded-lg px-4 py-3"
+            >
+              <FiGlobe size={18} />
+              <span className="font-medium">{language === 'en' ? 'Tiếng Việt' : 'English'}</span>
+            </button>
+
+            <Link
+              href="/contact"
+              className="block bg-primary-600 hover:bg-primary-700 text-white px-6 py-3 rounded-lg transition-colors text-center font-medium mt-4"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              {t('nav.getStarted')}
+            </Link>
           </div>
-        )}
+        </div>
       </nav>
     </header>
   )

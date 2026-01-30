@@ -35,8 +35,8 @@ const Footer = () => {
       <div className="absolute top-0 right-0 w-96 h-96 bg-primary-200 rounded-full blur-3xl opacity-30 -z-10"></div>
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-secondary-200 rounded-full blur-3xl opacity-30 -z-10"></div>
       
-      <div className="container-custom py-12 md:py-16 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div className="container-custom py-10 sm:py-12 md:py-16 relative z-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10">
           {/* Company Info */}
           <div className="space-y-4">
             <div className="flex items-center space-x-3 group">
@@ -84,7 +84,7 @@ const Footer = () => {
 
           {/* Services */}
           <div>
-            <h3 className="text-gray-900 font-semibold text-lg mb-4">{t('footer.services')}</h3>
+            <h3 className="text-gray-900 font-semibold text-base sm:text-lg mb-3 sm:mb-4">{t('footer.services')}</h3>
             <ul className="space-y-2">
               {services.map((item) => (
                 <li key={item.name}>
@@ -98,7 +98,7 @@ const Footer = () => {
 
           {/* Company */}
           <div>
-            <h3 className="text-gray-900 font-semibold text-lg mb-4">{t('footer.company')}</h3>
+            <h3 className="text-gray-900 font-semibold text-base sm:text-lg mb-3 sm:mb-4">{t('footer.company')}</h3>
             <ul className="space-y-2">
               {company.map((item) => (
                 <li key={item.name}>
@@ -112,21 +112,21 @@ const Footer = () => {
 
           {/* Contact Info */}
           <div>
-            <h3 className="text-gray-900 font-semibold text-lg mb-4">{t('footer.contact')}</h3>
+            <h3 className="text-gray-900 font-semibold text-base sm:text-lg mb-3 sm:mb-4">{t('footer.contact')}</h3>
             <ul className="space-y-3">
               <li className="flex items-start space-x-3">
-                <FiMapPin className="text-primary-600 mt-1 flex-shrink-0" size={18} />
-                <span className="text-sm text-gray-600">123 ABC Street, Son Tra, Danang, Vietnam</span>
+                <FiMapPin className="text-primary-600 mt-1 flex-shrink-0" size={16} />
+                <span className="text-xs sm:text-sm text-gray-600">123 ABC Street, Son Tra, Danang, Vietnam</span>
               </li>
               <li className="flex items-center space-x-3">
-                <FiPhone className="text-primary-600 flex-shrink-0" size={18} />
-                <a href="tel:+1234567890" className="text-sm text-gray-600 hover:text-primary-600 transition-colors">
+                <FiPhone className="text-primary-600 flex-shrink-0" size={16} />
+                <a href="tel:+1234567890" className="text-xs sm:text-sm text-gray-600 hover:text-primary-600 transition-colors">
                   +1 234 567 890
                 </a>
               </li>
               <li className="flex items-center space-x-3">
-                <FiMail className="text-primary-600 flex-shrink-0" size={18} />
-                <a href="mailto:info@wrentech.com" className="text-sm text-gray-600 hover:text-primary-600 transition-colors">
+                <FiMail className="text-primary-600 flex-shrink-0" size={16} />
+                <a href="mailto:info@wrentech.com" className="text-xs sm:text-sm text-gray-600 hover:text-primary-600 transition-colors">
                   info@wrentech.com
                 </a>
               </li>
@@ -135,8 +135,8 @@ const Footer = () => {
         </div>
 
         {/* Copyright */}
-        <div className="mt-12 pt-8 text-center">
-          <p className="text-sm text-gray-600">
+        <div className="mt-10 sm:mt-12 pt-6 sm:pt-8 text-center">
+          <p className="text-xs sm:text-sm text-gray-600">
             © {currentYear} Wren Tech. {t('footer.rights')}
           </p>
         </div>

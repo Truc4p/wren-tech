@@ -1,6 +1,7 @@
 'use client'
 
 import Image from 'next/image'
+import Link from 'next/link'
 import { useLanguage } from '@/contexts/LanguageContext'
 
 export default function ProjectsPage() {
@@ -53,13 +54,104 @@ export default function ProjectsPage() {
       year: '2023',
     },
     {
-      title: t('projectsPage.project6.title'),
-      category: t('projectsPage.project6.category'),
-      description: t('projectsPage.project6.description'),
-      image: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1200&h=800&fit=crop',
-      tags: ['Next.js', 'Google Maps API', 'PostgreSQL', 'AWS'],
-      client: t('projectsPage.project6.client'),
-      year: '2022',
+      title: t('projectsPage.project7.title'),
+      category: t('projectsPage.project7.category'),
+      description: t('projectsPage.project7.description'),
+      image: 'https://images.unsplash.com/photo-1540541338287-41700207dee6?w=1200&h=800&fit=crop',
+      tags: ['Next.js', 'Prisma', 'TypeScript', 'Tailwind CSS'],
+      client: t('projectsPage.project7.client'),
+      year: '2025',
+      link: 'http://localhost:3000',
+    },
+    {
+      title: t('projectsPage.project8.title'),
+      category: t('projectsPage.project8.category'),
+      description: t('projectsPage.project8.description'),
+      image: 'https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?w=1200&h=800&fit=crop',
+      tags: ['React', 'TypeScript', 'Vite', 'Tailwind CSS'],
+      client: t('projectsPage.project8.client'),
+      year: '2025',
+      link: 'http://localhost:5174',
+    },
+    {
+      title: t('projectsPage.project9.title'),
+      category: t('projectsPage.project9.category'),
+      description: t('projectsPage.project9.description'),
+      image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&h=800&fit=crop',
+      tags: ['Next.js 14', 'TypeScript', 'Prisma', 'Mapbox', 'PostgreSQL'],
+      client: t('projectsPage.project9.client'),
+      year: '2025',
+      link: 'http://localhost:3001',
+    },
+    {
+      title: t('projectsPage.project10.title'),
+      category: t('projectsPage.project10.category'),
+      description: t('projectsPage.project10.description'),
+      image: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1200&h=800&fit=crop',
+      tags: ['React', 'Node.js', 'PostgreSQL', 'Socket.io', 'Redis'],
+      client: t('projectsPage.project10.client'),
+      year: '2025',
+      link: 'http://localhost:5175',
+    },
+    {
+      title: t('projectsPage.project11.title'),
+      category: t('projectsPage.project11.category'),
+      description: t('projectsPage.project11.description'),
+      image: 'https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=1200&h=800&fit=crop',
+      tags: ['HTML5', 'CSS3', 'JavaScript', 'Responsive Design'],
+      client: t('projectsPage.project11.client'),
+      year: '2025',
+      link: 'http://localhost:5502',
+    },
+    {
+      title: t('projectsPage.project12.title'),
+      category: t('projectsPage.project12.category'),
+      description: t('projectsPage.project12.description'),
+      image: 'https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=1200&h=800&fit=crop',
+      tags: ['HTML5', 'CSS3', 'JavaScript', 'Responsive Design'],
+      client: t('projectsPage.project12.client'),
+      year: '2025',
+      link: 'http://localhost:5500',
+    },
+    {
+      title: t('projectsPage.project13.title'),
+      category: t('projectsPage.project13.category'),
+      description: t('projectsPage.project13.description'),
+      image: 'https://plus.unsplash.com/premium_photo-1664970900025-1e3099ca757a?w=1200&h=800&fit=crop',
+      tags: ['HTML5', 'CSS3', 'JavaScript', 'Responsive Design'],
+      client: t('projectsPage.project13.client'),
+      year: '2025',
+      link: 'http://localhost:5501',
+    },
+    {
+      title: t('projectsPage.project14.title'),
+      category: t('projectsPage.project14.category'),
+      description: t('projectsPage.project14.description'),
+      image: 'https://images.unsplash.com/photo-1581182800629-7d90925ad072?w=1200&h=800&fit=crop',
+      tags: ['Node.js', 'Vue 3', 'MongoDB', 'React Native', 'Google Gemini AI', 'Redis'],
+      client: t('projectsPage.project14.client'),
+      year: '2025',
+      link: 'http://localhost:5173',
+    },
+    {
+      title: t('projectsPage.project15.title'),
+      category: t('projectsPage.project15.category'),
+      description: t('projectsPage.project15.description'),
+      image: 'https://images.unsplash.com/photo-1498837167922-ddd27525d352?w=1200&h=800&fit=crop',
+      tags: ['React Native', 'Flask', 'SQLite', 'Google Gemini AI', 'USDA API', 'Expo'],
+      client: t('projectsPage.project15.client'),
+      year: '2025',
+      link: 'http://localhost:5001',
+    },
+    {
+      title: t('projectsPage.project16.title'),
+      category: t('projectsPage.project16.category'),
+      description: t('projectsPage.project16.description'),
+      image: 'https://images.unsplash.com/photo-1609357912334-e96886c0212b?w=1200&h=800&fit=crop',
+      tags: ['Node.js', 'Vue 3', 'MongoDB', 'React Native', 'Google Gemini AI', 'Qdrant', 'RAG'],
+      client: t('projectsPage.project16.client'),
+      year: '2026',
+      link: 'http://localhost:5175',
     },
   ]
 
@@ -88,14 +180,32 @@ export default function ProjectsPage() {
               >
                 {/* Image */}
                 <div className={`order-1 ${index % 2 === 1 ? 'lg:order-2' : ''}`}>
-                  <div className="relative h-96 rounded-2xl overflow-hidden shadow-2xl">
-                    <Image
-                      src={project.image}
-                      alt={project.title}
-                      fill
-                      className="object-cover hover:scale-105 transition-transform duration-500"
-                    />
-                  </div>
+                  {project.link ? (
+                    <Link href={project.link} target="_blank" rel="noopener noreferrer" className="block">
+                      <div className="relative h-96 rounded-2xl overflow-hidden shadow-2xl cursor-pointer group">
+                        <Image
+                          src={project.image}
+                          alt={project.title}
+                          fill
+                          className="object-cover group-hover:scale-105 transition-transform duration-500"
+                        />
+                        <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300 flex items-center justify-center">
+                          <span className="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-lg font-semibold bg-primary-600 px-6 py-3 rounded-lg">
+                            View Project →
+                          </span>
+                        </div>
+                      </div>
+                    </Link>
+                  ) : (
+                    <div className="relative h-96 rounded-2xl overflow-hidden shadow-2xl">
+                      <Image
+                        src={project.image}
+                        alt={project.title}
+                        fill
+                        className="object-cover hover:scale-105 transition-transform duration-500"
+                      />
+                    </div>
+                  )}
                 </div>
 
                 {/* Content */}
@@ -117,7 +227,7 @@ export default function ProjectsPage() {
                     </div>
                   </div>
 
-                  <div className="flex flex-wrap gap-2">
+                  <div className="flex flex-wrap gap-2 mb-6">
                     {project.tags.map((tag, tagIndex) => (
                       <span
                         key={tagIndex}
@@ -127,6 +237,20 @@ export default function ProjectsPage() {
                       </span>
                     ))}
                   </div>
+
+                  {project.link && (
+                    <Link 
+                      href={project.link} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 bg-primary-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-primary-700 transition-colors duration-300"
+                    >
+                      Visit Website
+                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                      </svg>
+                    </Link>
+                  )}
                 </div>
               </div>
             ))}
