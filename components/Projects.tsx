@@ -47,7 +47,7 @@ const Projects = () => {
       tags: ['Next.js', 'Prisma', 'TypeScript', 'Tailwind CSS'],
       client: t('projectsPage.project7.client'),
       year: '2025',
-      link: 'http://localhost:3000',
+      link: 'https://paradise-resort-rouge.vercel.app',
     },
     {
       title: t('projectsPage.project8.title'),
@@ -77,7 +77,7 @@ const Projects = () => {
       tags: ['React', 'Node.js', 'PostgreSQL', 'Socket.io', 'Redis'],
       client: t('projectsPage.project10.client'),
       year: '2025',
-      link: 'http://localhost:5175',
+      link: 'https://urban-bistro-git-main-truc-projects.vercel.app',
     },
     {
       title: t('projectsPage.project11.title'),
@@ -182,43 +182,87 @@ const Projects = () => {
               transition={{ duration: 0.6, delay: index * 0.1 }}
               className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300"
             >
-              {/* Image */}
-              <div className="relative h-48 sm:h-56 md:h-64 overflow-hidden">
-                <Image
-                  src={project.image}
-                  alt={project.title}
-                  fill
-                  className="object-cover group-hover:scale-110 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <div className="absolute bottom-4 right-4">
-                    <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center">
-                      <FiExternalLink className="text-primary-600" size={20} />
+              {project.link ? (
+                <Link href={project.link} target="_blank" rel="noopener noreferrer" className="block">
+                  {/* Image */}
+                  <div className="relative h-48 sm:h-56 md:h-64 overflow-hidden">
+                    <Image
+                      src={project.image}
+                      alt={project.title}
+                      fill
+                      className="object-cover group-hover:scale-110 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <div className="absolute bottom-4 right-4">
+                        <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center">
+                          <FiExternalLink className="text-primary-600" size={20} />
+                        </div>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </div>
 
-              {/* Content */}
-              <div className="p-5 sm:p-6">
-                <div className="text-xs sm:text-sm text-primary-600 font-semibold mb-2">{project.category}</div>
-                <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2 group-hover:text-primary-600 transition-colors">
-                  {project.title}
-                </h3>
-                <p className="text-sm sm:text-base text-gray-600 mb-4 line-clamp-2">{project.description}</p>
-                
-                {/* Tags */}
-                <div className="flex flex-wrap gap-2">
-                  {project.tags.map((tag, tagIndex) => (
-                    <span
-                      key={tagIndex}
-                      className="px-3 py-1 bg-gray-100 text-gray-700 text-xs rounded-full"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-              </div>
+                  {/* Content */}
+                  <div className="p-5 sm:p-6">
+                    <div className="text-xs sm:text-sm text-primary-600 font-semibold mb-2">{project.category}</div>
+                    <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2 group-hover:text-primary-600 transition-colors">
+                      {project.title}
+                    </h3>
+                    <p className="text-sm sm:text-base text-gray-600 mb-4 line-clamp-2">{project.description}</p>
+                    
+                    {/* Tags */}
+                    <div className="flex flex-wrap gap-2">
+                      {project.tags.map((tag, tagIndex) => (
+                        <span
+                          key={tagIndex}
+                          className="px-3 py-1 bg-gray-100 text-gray-700 text-xs rounded-full"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </Link>
+              ) : (
+                <>
+                  {/* Image */}
+                  <div className="relative h-48 sm:h-56 md:h-64 overflow-hidden">
+                    <Image
+                      src={project.image}
+                      alt={project.title}
+                      fill
+                      className="object-cover group-hover:scale-110 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <div className="absolute bottom-4 right-4">
+                        <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center">
+                          <FiExternalLink className="text-primary-600" size={20} />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Content */}
+                  <div className="p-5 sm:p-6">
+                    <div className="text-xs sm:text-sm text-primary-600 font-semibold mb-2">{project.category}</div>
+                    <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2 group-hover:text-primary-600 transition-colors">
+                      {project.title}
+                    </h3>
+                    <p className="text-sm sm:text-base text-gray-600 mb-4 line-clamp-2">{project.description}</p>
+                    
+                    {/* Tags */}
+                    <div className="flex flex-wrap gap-2">
+                      {project.tags.map((tag, tagIndex) => (
+                        <span
+                          key={tagIndex}
+                          className="px-3 py-1 bg-gray-100 text-gray-700 text-xs rounded-full"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </>
+              )}
             </motion.div>
           ))}
         </div>

@@ -47,7 +47,7 @@ export default function ProjectsPage() {
       tags: ['Next.js', 'Prisma', 'TypeScript', 'Tailwind CSS'],
       client: t('projectsPage.project7.client'),
       year: '2025',
-      link: 'http://localhost:3000',
+      link: 'https://paradise-resort-rouge.vercel.app',
     },
     {
       title: t('projectsPage.project8.title'),
@@ -77,7 +77,7 @@ export default function ProjectsPage() {
       tags: ['React', 'Node.js', 'PostgreSQL', 'Socket.io', 'Redis'],
       client: t('projectsPage.project10.client'),
       year: '2025',
-      link: 'http://localhost:5175',
+      link: 'https://urban-bistro-git-main-truc-projects.vercel.app',
     },
     {
       title: t('projectsPage.project11.title'),
