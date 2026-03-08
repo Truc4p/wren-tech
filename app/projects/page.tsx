@@ -57,7 +57,7 @@ export default function ProjectsPage() {
       tags: ['React', 'TypeScript', 'Vite', 'Tailwind CSS'],
       client: t('projectsPage.project8.client'),
       year: '2025',
-      link: 'http://localhost:5174',
+      link: 'https://fashion-vpwh.vercel.app',
     },
     {
       title: t('projectsPage.project9.title'),
@@ -87,7 +87,7 @@ export default function ProjectsPage() {
       tags: ['HTML5', 'CSS3', 'JavaScript', 'Responsive Design'],
       client: t('projectsPage.project11.client'),
       year: '2025',
-      link: 'http://localhost:5502',
+      link: 'https://car-dana.vercel.app/',
     },
     {
       title: t('projectsPage.project12.title'),
@@ -97,7 +97,7 @@ export default function ProjectsPage() {
       tags: ['HTML5', 'CSS3', 'JavaScript', 'Responsive Design'],
       client: t('projectsPage.project12.client'),
       year: '2025',
-      link: 'http://localhost:5500',
+      link: 'https://dental-care-ebon.vercel.app/',
     },
     {
       title: t('projectsPage.project13.title'),
@@ -107,7 +107,7 @@ export default function ProjectsPage() {
       tags: ['HTML5', 'CSS3', 'JavaScript', 'Responsive Design'],
       client: t('projectsPage.project13.client'),
       year: '2025',
-      link: 'http://localhost:5501',
+      link: 'https://coffee-shop-xi-six.vercel.app/',
     },
 
     {
