@@ -27,7 +27,7 @@ const Projects = () => {
       tags: ['React Native', 'Flask', 'SQLite', 'Google Gemini AI', 'USDA API', 'Expo'],
       client: t('projectsPage.project15.client'),
       year: '2025',
-      link: 'http://localhost:5001',
+      link: 'https://nutrition-track-1igxs503c-truc-projects.vercel.app/',
     },
     {
       title: t('projectsPage.project16.title'),
