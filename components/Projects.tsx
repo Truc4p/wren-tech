@@ -57,7 +57,7 @@ const Projects = () => {
       tags: ['React', 'TypeScript', 'Vite', 'Tailwind CSS'],
       client: t('projectsPage.project8.client'),
       year: '2025',
-      link: 'https://fashion-vpwh.vercel.app',
+      link: 'https://fashion-one-teal.vercel.app/',
     },
     {
       title: t('projectsPage.project9.title'),
