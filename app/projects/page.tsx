@@ -50,6 +50,16 @@ export default function ProjectsPage() {
       link: 'https://warehouse-management-system-ecru.vercel.app/',
     },
     {
+      title: t('projectsPage.project20.title'),
+      category: t('projectsPage.project20.category'),
+      description: t('projectsPage.project20.description'),
+      image: 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=1200&h=800&fit=crop',
+      tags: ['Python', 'FastAPI', 'LangChain', 'ChromaDB', 'Groq', 'RAG', 'HTML/CSS/JS'],
+      client: t('projectsPage.project20.client'),
+      year: '2025',
+      link: 'https://github.com/Truc4p/lifeos-ai',
+    },
+    {
       title: t('projectsPage.project18.title'),
       category: t('projectsPage.project18.category'),
       description: t('projectsPage.project18.description'),

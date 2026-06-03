@@ -116,12 +116,12 @@ const Footer = () => {
             <ul className="space-y-3">
               <li className="flex items-start space-x-3">
                 <FiMapPin className="text-primary-600 mt-1 flex-shrink-0" size={16} />
-                <span className="text-xs sm:text-sm text-gray-600">123 ABC Street, Son Tra, Danang, Vietnam</span>
+                <span className="text-xs sm:text-sm text-gray-600">Luong Huu Khanh, Son Tra, Danang, Vietnam</span>
               </li>
               <li className="flex items-center space-x-3">
                 <FiPhone className="text-primary-600 flex-shrink-0" size={16} />
                 <a href="tel:+1234567890" className="text-xs sm:text-sm text-gray-600 hover:text-primary-600 transition-colors">
-                  +1 234 567 890
+                  +84 932 117 341
                 </a>
               </li>
               <li className="flex items-center space-x-3">
