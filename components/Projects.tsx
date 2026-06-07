@@ -57,7 +57,7 @@ const Projects = () => {
       tags: ['Python', 'FastAPI', 'LangChain', 'ChromaDB', 'Groq', 'RAG', 'HTML/CSS/JS'],
       client: t('projectsPage.project20.client'),
       year: '2025',
-      link: 'https://github.com/Truc4p/lifeos-ai',
+      link: 'https://lifeos-ai-seven.vercel.app/',
     },
     {
       title: t('projectsPage.project18.title'),
