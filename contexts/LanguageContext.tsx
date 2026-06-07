@@ -232,15 +232,15 @@ const translations = {
     'contactPage.emailValue': 'info@wrentech.com',
     'contactPage.hoursTitle': 'Business Hours',
     'contactPage.monday': 'Monday - Friday',
-    'contactPage.mondayHours': '9:00 AM - 6:00 PM',
+    'contactPage.mondayHours': '7:00 AM - 7:00 PM',
     'contactPage.saturday': 'Saturday',
-    'contactPage.saturdayHours': '10:00 AM - 4:00 PM',
+    'contactPage.saturdayHours': '7:00 AM - 4:00 PM',
     'contactPage.sunday': 'Sunday',
     'contactPage.sundayHours': 'Closed',
     'contactPage.successMessage': 'Thank you for your message! We will get back to you soon.',
     'contactPage.namePlaceholder': 'John Doe',
     'contactPage.emailPlaceholder': 'john@example.com',
-    'contactPage.phonePlaceholder': '+84 932 117 341',
+    'contactPage.phonePlaceholder': '+84 987 654 321',
   },
   vi: {
     // Navigation
