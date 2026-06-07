@@ -116,7 +116,7 @@ const Footer = () => {
             <ul className="space-y-3">
               <li className="flex items-start space-x-3">
                 <FiMapPin className="text-primary-600 mt-1 flex-shrink-0" size={16} />
-                <span className="text-xs sm:text-sm text-gray-600">Luong Huu Khanh, Son Tra, Danang, Vietnam</span>
+                <span className="text-xs sm:text-sm text-gray-600">75 Luong Huu Khanh, Son Tra, Danang, Vietnam</span>
               </li>
               <li className="flex items-center space-x-3">
                 <FiPhone className="text-primary-600 flex-shrink-0" size={16} />
