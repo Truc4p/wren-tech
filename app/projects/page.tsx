@@ -110,6 +110,16 @@ export default function ProjectsPage() {
       link: 'https://real-estate-liart-tau-15.vercel.app/',
     },
     {
+      title: t('projectsPage.project21.title'),
+      category: t('projectsPage.project21.category'),
+      description: t('projectsPage.project21.description'),
+      image: 'https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=1200&h=800&fit=crop',
+      tags: ['React', 'Express', 'MongoDB', 'Cloudinary', 'Tailwind CSS', 'shadcn/ui'],
+      client: t('projectsPage.project21.client'),
+      year: '2026',
+      link: 'https://bino-foundry.vercel.app/',
+    },
+    {
       title: t('projectsPage.project8.title'),
       category: t('projectsPage.project8.category'),
       description: t('projectsPage.project8.description'),

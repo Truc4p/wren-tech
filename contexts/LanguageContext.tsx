@@ -188,6 +188,10 @@ const translations = {
     'projectsPage.project19.category': 'Desktop & Web Application',
     'projectsPage.project19.description': 'A data structures and algorithms driven bookstore management system with admin and customer modules, CSV-based persistence, and a web interface deployment. Built in Java with custom ADTs and sorting/searching algorithms.',
     'projectsPage.project19.client': 'Academic Project',
+    'projectsPage.project21.title': 'Bespoke Crystal Bracelets & Luxury Accessories',
+    'projectsPage.project21.category': 'E-commerce & Customization Platform',
+    'projectsPage.project21.description': 'A bespoke jewelry e-commerce platform that lets customers design their own crystal bracelets and luxury sunglasses with an interactive drag-and-drop builder. Built with React, Express, MongoDB, and Cloudinary for image management.',
+    'projectsPage.project21.client': 'Personal Project',
     'projectsPage.client': 'Client',
     'projectsPage.year': 'Year',
     
@@ -417,6 +421,10 @@ const translations = {
     'projectsPage.project19.category': 'Ứng dụng Desktop & Web',
     'projectsPage.project19.description': 'Hệ thống quản lý cửa hàng sách ứng dụng cấu trúc dữ liệu và giải thuật với các module quản trị và khách hàng, lưu trữ dữ liệu bằng CSV, đồng thời triển khai giao diện web. Được xây dựng bằng Java với ADT tự cài đặt và các thuật toán sắp xếp/tìm kiếm.',
     'projectsPage.project19.client': 'Đồ án học thuật',
+    'projectsPage.project21.title': 'Vòng tay Pha lê & Phụ kiện Xa xỉ Thiết kế riêng',
+    'projectsPage.project21.category': 'Nền tảng Thương mại điện tử & Tùy chỉnh',
+    'projectsPage.project21.description': 'Nền tảng thương mại điện tử trang sức cho phép khách hàng tự thiết kế vòng tay pha lê và kính mát xa xỉ của riêng mình với công cụ kéo-thả tương tác. Được xây dựng bằng React, Express, MongoDB và Cloudinary để quản lý hình ảnh.',
+    'projectsPage.project21.client': 'Dự án Cá nhân',
     'projectsPage.client': 'Khách hàng',
     'projectsPage.year': 'Năm',
     
