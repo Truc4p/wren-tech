@@ -64,7 +64,7 @@ export default function ProjectsPage() {
       category: t('projectsPage.project22.category'),
       description: t('projectsPage.project22.description'),
       image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&h=800&fit=crop',
-      tags: ['Next.js', 'TypeScript', 'Tailwind CSS', 'shadcn/ui'],
+      tags: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'shadcn/ui', 'OpenAI GPT-4', 'Upstash Redis'],
       client: t('projectsPage.project22.client'),
       year: '2026',
       link: 'https://wavelength-blond.vercel.app/',
