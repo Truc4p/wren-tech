@@ -60,6 +60,16 @@ const Projects = () => {
       link: 'https://lifeos-ai-seven.vercel.app/',
     },
     {
+      title: t('projectsPage.project22.title'),
+      category: t('projectsPage.project22.category'),
+      description: t('projectsPage.project22.description'),
+      image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&h=800&fit=crop',
+      tags: ['Next.js', 'TypeScript', 'Tailwind CSS', 'shadcn/ui'],
+      client: t('projectsPage.project22.client'),
+      year: '2026',
+      link: 'https://wavelength-blond.vercel.app/',
+    },
+    {
       title: t('projectsPage.project21.title'),
       category: t('projectsPage.project21.category'),
       description: t('projectsPage.project21.description'),

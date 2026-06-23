@@ -192,6 +192,10 @@ const translations = {
     'projectsPage.project21.category': 'E-commerce & Customization Platform',
     'projectsPage.project21.description': 'A bespoke jewelry e-commerce platform that lets customers design their own crystal bracelets and luxury sunglasses with an interactive drag-and-drop builder. Built with React, Express, MongoDB, and Cloudinary for image management.',
     'projectsPage.project21.client': 'Personal Project',
+    'projectsPage.project22.title': 'Wavelength - AI Team Alignment Platform',
+    'projectsPage.project22.category': 'AI-Powered Team Assessment Tool',
+    'projectsPage.project22.description': 'An AI-powered conversational assessment tool that interviews team members through a guided psychometric flow — covering psychological safety, transactive memory systems, shared mental models, and team learning behavior — then synthesizes individual and team-level reports to help teams align before they build. Built with Next.js, TypeScript, Tailwind CSS, and shadcn/ui.',
+    'projectsPage.project22.client': 'Personal Project',
     'projectsPage.client': 'Client',
     'projectsPage.year': 'Year',
     
@@ -425,6 +429,10 @@ const translations = {
     'projectsPage.project21.category': 'Nền tảng Thương mại điện tử & Tùy chỉnh',
     'projectsPage.project21.description': 'Nền tảng thương mại điện tử trang sức cho phép khách hàng tự thiết kế vòng tay pha lê và kính mát xa xỉ của riêng mình với công cụ kéo-thả tương tác. Được xây dựng bằng React, Express, MongoDB và Cloudinary để quản lý hình ảnh.',
     'projectsPage.project21.client': 'Dự án Cá nhân',
+    'projectsPage.project22.title': 'Wavelength - Nền tảng Gắn kết Đội nhóm AI',
+    'projectsPage.project22.category': 'Công cụ Đánh giá Đội nhóm bằng AI',
+    'projectsPage.project22.description': 'Công cụ đánh giá hội thoại được vận hành bằng AI, phỏng vấn từng thành viên trong nhóm theo quy trình đo lường tâm lý có hướng dẫn — bao gồm an toàn tâm lý, hệ thống ghi nhớ giao dịch, mô hình tinh thần chung và hành vi học tập của nhóm — sau đó tổng hợp thành báo cáo cá nhân và báo cáo cấp đội nhóm để giúp các nhóm gắn kết trước khi bắt đầu xây dựng. Được xây dựng bằng Next.js, TypeScript, Tailwind CSS và shadcn/ui.',
+    'projectsPage.project22.client': 'Dự án Cá nhân',
     'projectsPage.client': 'Khách hàng',
     'projectsPage.year': 'Năm',
     
